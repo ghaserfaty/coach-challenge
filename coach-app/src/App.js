@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Field></Field>
+      <Field name='Guillermo'></Field>
     </div>
   );
 }
