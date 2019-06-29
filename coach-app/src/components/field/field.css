@@ -1,6 +1,8 @@
 .field{
     height:570px;
     background: url('../../assets/soccer-field-svgrepo-com.svg') no-repeat center center fixed;
-    background-size: auto 100%;
-
+    text-align: center;
+    background-color: #282c34;
+    min-height: 100vh;
+    color: white;
 }

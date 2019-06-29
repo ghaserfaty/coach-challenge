@@ -6,8 +6,8 @@ const Players = (props) => {
     return (
       <React.Fragment>
         {props.items.map(item => (
-          <React.Fragment key={item}>
-            <Player></Player>
+          <React.Fragment key={item.id}>
+            <Player team={item.team.id}></Player>
           </React.Fragment>
         ))}
       </React.Fragment>
@@ -16,7 +16,7 @@ const Players = (props) => {
 
 export default class Field extends React.Component {
     render() {
-      return <div className='field container'>
+      return <div className='field'>
         <Players items={this.props.players}></Players>
       </div>;
     }

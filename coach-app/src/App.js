@@ -1,26 +1,34 @@
 import React from 'react';
 import Field from './components/field/field';
-import Player from './components/player/player';
+import {PlayerService} from './services/players-service';
+import {PlayerList} from './components/playersList/playerList';
 import './App.css';
-
-const data = ['pedro','juan','sosvo']
-
-
 
 class App extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {players_data: []};
+  }
+
   componentDidMount(){
-    fetch('http://jsonplaceholder.typicode.com/users')
-    .then(res => res.json())
-    .then((data) => {
-      this.setState({ contacts: data })
+    PlayerService.getPlayersData().then((data)=>{
+
+      this.setState({players_data:data})
     })
-    .catch(console.log)
   }
   render(){
     return (
-      <div className="App">
-        <Field players={data}></Field>
+      <div className="App container-fluid">
+        <div className="row">
+          <div className="col-3"> 
+          <h1>Coach's board</h1>
+            <PlayerList players={this.state.players_data}></PlayerList>
+          </div>
+          <div className="col-9"><Field players={this.state.players_data}></Field></div>
+        </div>
+       
+        
       </div>
     );
   }
