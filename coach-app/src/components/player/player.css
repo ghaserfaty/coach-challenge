@@ -1,7 +1,10 @@
 .player{
     width: 50px;
     height: 50px;
-    border-radius: 50%
+    border-radius: 50%;
+    border-style: solid;
+    border-color: black;
+    margin-bottom: 20px;
 }
 
 .blue{
@@ -12,4 +15,10 @@
 .red{
     background: red;
 
+}
+
+.name{
+    position: relative;
+    top: 45px;
+    font-size: smaller;
 }

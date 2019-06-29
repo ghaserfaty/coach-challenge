@@ -25,7 +25,7 @@ class App extends React.Component {
           <h1>Coach's board</h1>
             <PlayerList players={this.state.players_data}></PlayerList>
           </div>
-          <div className="col-9"><Field players={this.state.players_data}></Field></div>
+          <div className="col-9 field-background"><Field players={this.state.players_data}></Field></div>
         </div>
        
         

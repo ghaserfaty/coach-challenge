@@ -8,7 +8,7 @@ const renderRows = (players,team) => {
   let ps = players.filter((p)=> p.team.id === team)
   return ps.map((p) => {
     return (
-      <ListGroup.Item>{p.name}</ListGroup.Item>
+      <ListGroup.Item key={p.id}>{p.name}</ListGroup.Item>
     )
  })
 }

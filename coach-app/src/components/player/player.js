@@ -28,7 +28,9 @@ export default class Player extends React.Component {
       bounds='parent'
       >
       <div className={'player handle '+(this.getTeamClassName())}>
+      <span className='name'>{this.props.name}</span>
       </div>
+      
     </Draggable>
     )
     }

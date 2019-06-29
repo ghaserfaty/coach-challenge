@@ -7,7 +7,7 @@ const Players = (props) => {
       <React.Fragment>
         {props.items.map(item => (
           <React.Fragment key={item.id}>
-            <Player team={item.team.id}></Player>
+            <Player team={item.team.id} name={item.name}></Player>
           </React.Fragment>
         ))}
       </React.Fragment>
