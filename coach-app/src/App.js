@@ -22,7 +22,7 @@ class App extends React.Component {
       <div className="App container-fluid">
         <div className="row">
           <div className="col-3"> 
-          <h1>Coach's board</h1>
+          <h1 className='App-title'>Coach's board</h1>
             <PlayerList players={this.state.players_data}></PlayerList>
           </div>
           <div className="col-9 field-background"><Field players={this.state.players_data}></Field></div>
