@@ -5,9 +5,11 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import './index.css';
 import App from './App';
+import ErrorBoundary from './components/error-boundary/error-boundary';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// Error boundary added :)
+ReactDOM.render(<ErrorBoundary><App /></ErrorBoundary>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
