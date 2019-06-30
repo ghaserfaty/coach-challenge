@@ -2,6 +2,7 @@ import React from 'react';
 import Field from './components/field/field';
 import {PlayerService} from './services/players-service';
 import {PlayerList} from './components/playersList/playerList';
+import {isPlayersDataValid} from './utils/validations';
 import './App.css';
 
 class App extends React.Component {
@@ -14,7 +15,13 @@ class App extends React.Component {
   componentDidMount(){
     PlayerService.getPlayersData().then((data)=>{
 
-      this.setState({players_data:data})
+      if(isPlayersDataValid(data)){
+        this.setState({players_data:data});
+      }else{
+        throw new Error('Wrong data');
+      }
+    }).catch((err)=>{
+      console.log(err)
     })
   }
   render(){

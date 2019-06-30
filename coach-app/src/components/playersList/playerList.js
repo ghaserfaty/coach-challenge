@@ -6,10 +6,13 @@ import {CONSTANTS} from '../../utils/constants';
 
 
 const renderRows = (players,team) => {
-  let ps = players.filter((p)=> {
+  //filters data by team
+  let ps = players.filter((p)=> { 
     if(has(p,'team.id'))  return p.team.id === team;
     return false;
   })
+
+  //returns one table row per player
   return ps.map((p) => {
     return (
       <tr key={p.id}>
