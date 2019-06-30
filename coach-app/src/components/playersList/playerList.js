@@ -1,11 +1,15 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
+import {has} from 'lodash';
 import './playerList.css';
 import {CONSTANTS} from '../../utils/constants';
 
 
 const renderRows = (players,team) => {
-  let ps = players.filter((p)=> p.team.id === team)
+  let ps = players.filter((p)=> {
+    if(has(p,'team.id'))  return p.team.id === team;
+    return false;
+  })
   return ps.map((p) => {
     return (
       <tr key={p.id}>
