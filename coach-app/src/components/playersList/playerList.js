@@ -9,7 +9,7 @@ const renderRows = (players,team) => {
   return ps.map((p) => {
     return (
       <tr key={p.id}>
-        <td>{p.name}</td>
+        <td>{p.name} - {p.role ? p.role.name : ''}</td>
       </tr>
     )
  })
