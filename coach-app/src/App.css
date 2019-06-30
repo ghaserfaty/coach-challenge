@@ -1,0 +1,17 @@
+.field-background {
+  background: #282c34 url('./assets/Soccer_Field_Transparant.svg') no-repeat center center;
+
+}
+
+.App-title {
+  color: darkcyan;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
