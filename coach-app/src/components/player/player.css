@@ -4,6 +4,7 @@
     border-radius: 50%;
     border-style: solid;
     border-color: black;
+    margin-top: 10px;
     margin-bottom: 20px;
     cursor: grab;
 }
