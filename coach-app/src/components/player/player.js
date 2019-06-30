@@ -22,9 +22,6 @@ export default class Player extends React.Component {
       position={null}
       grid={[25, 25]}
       scale={1}
-      onStart={this.handleStart}
-      onDrag={this.handleDrag}
-      onStop={this.handleStop}
       bounds='parent'
       >
       <div className={'player handle '+(this.getTeamClassName())}>
