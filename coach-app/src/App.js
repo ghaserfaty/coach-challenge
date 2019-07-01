@@ -6,6 +6,7 @@ import { PlayerService } from './services/players-service';
 import { isPlayersDataValid } from './utils/validations';
 import {ErrorMessage} from './components/error-message/error-message';
 import { CONSTANTS } from './utils/constants';
+import {Footer} from './components/footer/footer';
 
 const DivWithErrorHandling = ErrorMessage(({children}) => <div>{children}</div>)
 
@@ -43,8 +44,9 @@ class App extends React.Component {
           <div className="col-9 field-background"><Field players={this.state.players_data}></Field></div>
         </div>
        
-        
+       
       </div>
+      <Footer></Footer>
       </DivWithErrorHandling>
     );
   }

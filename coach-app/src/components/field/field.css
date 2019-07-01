@@ -3,6 +3,9 @@
     text-align: center;
     min-height: 100vh;
     color: white;
+    margin-bottom: 30px;
+}
 
-
+.field-image{
+    margin:28px;
 }
