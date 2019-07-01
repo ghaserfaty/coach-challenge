@@ -22,7 +22,7 @@ export default class Player extends React.Component {
       position={null}
       grid={[25, 25]}
       scale={1}
-      bounds='parent'
+      bounds='.field'
       >
       <div className={'player handle '+(this.getTeamClassName())}>
       <span className='name'>{this.props.name}</span>
