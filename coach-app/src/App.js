@@ -37,6 +37,7 @@ class App extends React.Component {
         <div className="row">
           <div className="col-3"> 
           <h1 className='App-title'>Coach's board</h1>
+          <p>Drag the players to the field...</p>
             <PlayerList players={this.state.players_data}></PlayerList>
           </div>
           <div className="col-9 field-background"><Field players={this.state.players_data}></Field></div>
