@@ -99,7 +99,7 @@ test('if it undefined should return false', () => {
 });
 
 test('different size of teams should return false', () => {
-    const GOOD_PLAYERS_DATA = [
+    const wronTeamSize = [
         {
             id:1,
             name:'MarcusB',
@@ -126,5 +126,5 @@ test('different size of teams should return false', () => {
         }
     
     ]
-    expect(isPlayersDataValid(GOOD_PLAYERS_DATA,1)).toBe(false);
+    expect(isPlayersDataValid(wronTeamSize,1)).toBe(false);
 });
