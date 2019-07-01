@@ -74,8 +74,6 @@ const PLAYERS_DATA = [
 
 ]
 
-//export const getPlayersdata = () => {return PLAYERS_DATA};
-
 export const PlayerService = {
     getPlayersData: function(){
         return new Promise((resolve,reject)=>{
