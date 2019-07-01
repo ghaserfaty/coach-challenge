@@ -5,6 +5,7 @@ import { PlayerList } from './components/playersList/playerList';
 import { PlayerService } from './services/players-service';
 import { isPlayersDataValid } from './utils/validations';
 import {ErrorMessage} from './components/error-message/error-message';
+import { CONSTANTS } from './utils/constants';
 
 const DivWithErrorHandling = ErrorMessage(({children}) => <div>{children}</div>)
 
@@ -20,7 +21,7 @@ class App extends React.Component {
 
     PlayerService.getPlayersData().then((data)=>{
 
-      if(isPlayersDataValid(data)){
+      if(isPlayersDataValid(data,CONSTANTS.TEAM_SIZE)){
         this.setState({players_data:data});
       }else{
         throw new Error('Wrong data');
