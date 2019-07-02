@@ -9,8 +9,8 @@ export default class Player extends React.Component {
 
     getTeamClassName(){
       let team = this.props.team;
-      if(team === CONSTANTS.BLUE_TEAM){ return 'blue';}
-      if(team === CONSTANTS.RED_TEAM){ return 'red';}
+      if(team === CONSTANTS.BLUE_TEAM){ return CONSTANTS.BLUE_TEAM_LABEL;}
+      if(team === CONSTANTS.RED_TEAM){ return CONSTANTS.RED_TEAM_LABEL;}
       return '';
     }
     render() {

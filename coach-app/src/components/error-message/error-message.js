@@ -4,7 +4,7 @@ import './error-message.css';
 export  const ErrorMessage = WrappedComponent => ({ showError, children }) => {
     return (
       <WrappedComponent>
-        {showError && <div className="error-message">Oops! Something went wrong!</div>}
+        {showError && <div className="error-message">Something went wrong!</div>}
         {children}
       </WrappedComponent>
     );

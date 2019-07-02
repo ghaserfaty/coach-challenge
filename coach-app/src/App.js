@@ -43,8 +43,6 @@ class App extends React.Component {
           </div>
           <div className="col-9 field-background"><Field players={this.state.players_data}></Field></div>
         </div>
-       
-       
       </div>
       <Footer></Footer>
       </DivWithErrorHandling>
