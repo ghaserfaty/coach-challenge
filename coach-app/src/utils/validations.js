@@ -1,24 +1,16 @@
 import {CONSTANTS} from './constants';
-import {has} from 'lodash';
+import {groupBy} from 'lodash';
 
 export const isPlayersDataValid = (playersData,teamSize) => {
     if(!Array.isArray(playersData) || playersData.length !== (teamSize * 2)) return false;
 
-    let blueTeam = playersData.filter((p)=> { 
-        if(has(p,'team.id'))  return p.team.id === CONSTANTS.BLUE_TEAM;
-        return false;
-    });
-    
-    if(blueTeam.length !== teamSize) return false;
+    let teams = groupBy(playersData,'team.id')
+    if(teams[CONSTANTS.BLUE_TEAM].length === teamSize && teams[CONSTANTS.RED_TEAM].length === teamSize){
+        return true
+    }
 
-    let redTeam = playersData.filter((p)=> { 
-        if(has(p,'team.id'))  return p.team.id === CONSTANTS.RED_TEAM;
-        return false;
-    });
-    
-    if(redTeam.length !== teamSize) return false;
 
-    return true;
+    return false;
 
 
 }
